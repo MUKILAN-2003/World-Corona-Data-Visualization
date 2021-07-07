@@ -12,7 +12,16 @@ body {
         font-size: 28px!important;
     }
     header h1 {
-        margin: 4px 0px 50px 0px;
+        margin: 4px 0px 4px 0px;
+    }
+    .hint {
+        font-size: 26px!important;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px;
+        margin: 0px 10px 0px 10px;
+        text-shadow: 1px 1px rgb(255, 0, 0);
+        border-bottom: 2px solid black;
     }
 }
 
@@ -21,7 +30,15 @@ body {
         font-size: medium;
     }
     header h1 {
-        margin: 4px 0px 25px 0px;
+        margin: 4px 0px 4px 0px;
+    }
+    .hint {
+        font-size: 20px!important;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px;
+        text-shadow: 1px 1px rgb(255, 0, 0);
+        border-bottom: 2px solid black;
     }
 }
 
@@ -54,7 +71,10 @@ footer .main-footer h4 {
 
 .sub-header li {
     list-style: none;
-    margin: 180px 0px 180px 0px;
+    margin: 120px 0px 120px 0px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .sub-header a {
@@ -77,6 +97,9 @@ footer .main-footer h4 {
         display: flex;
         justify-content: space-around;
     }
+    .d_mobile {
+        display: none;
+    }
 }
 
 @media (max-width:768px) {
@@ -86,5 +109,8 @@ footer .main-footer h4 {
     .sub-header {
         display: block;
         text-align: center;
+    }
+    .d_desktop {
+        display: none;
     }
 }
