@@ -82,7 +82,7 @@ function fetch_data() {
 
 setInterval(fetch_data, 21600000);
 
-app.listen(5500 || system.PORT)
+app.listen(process.env.PORT || 3000)
 console.log('Server Listening............ok')
 
 //Routing The Responce
