@@ -80,6 +80,8 @@ function fetch_data() {
     collect_india_data();
 }
 
+setInterval(fetch_data, 21600000);
+
 app.listen(5500)
 console.log('Server Listening............ok')
 
@@ -89,11 +91,7 @@ app.get('/', (req, res) => {
     res.end()
 });
 
-app.get('/update', (req, res) => {
-    res.redirect('/')
-    fetch_data()
-    res.end()
-})
+
 
 app.get('/world', (req, res) => {
     res.render('world')

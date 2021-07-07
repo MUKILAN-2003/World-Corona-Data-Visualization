@@ -4,6 +4,15 @@ let india;
 var projection = d3.geo.mercator();
 var path = d3.geo.path().projection(projection);
 
+var state_id = document.getElementById('state_id')
+var state_confirmed = document.getElementById('state_confirmed')
+var state_recovered = document.getElementById('state_recovered')
+var state_active = document.getElementById('state_active')
+var state_death = document.getElementById('state_death')
+var delta_confirm = document.getElementById('delta_confirm')
+var delta_death = document.getElementById('delta_death')
+
+
 let xscale = d3.scaleLinear()
     .domain([0, 2500000])
     .range([1, 10])
@@ -17,8 +26,6 @@ function main() {
         projection.scale(6700);
         projection.translate([-1140, 750]);
     }
-    console.log(india_data)
-    console.log(india)
 
     let svg = d3.select('#india-map')
     svg.attr('width', 800)
@@ -43,6 +50,28 @@ function main() {
                 return 'White'
             }
         })
+        .on('mouseover', (item) => {
+            state_id.innerText = item.properties.name
+            state_confirmed.innerHTML = 'Confirmed : ' + india_data.state_wise[item.properties.name].confirmed
+            state_recovered.innerHTML = 'Recovered : ' + india_data.state_wise[item.properties.name].recovered
+            state_active.innerHTML = 'Active : ' + india_data.state_wise[item.properties.name].active
+            delta_confirm.innerHTML = 'Delta Confirm: ' + india_data.state_wise[item.properties.name].deltaconfirmed
+            delta_death.innerHTML = 'Delta Death : ' + india_data.state_wise[item.properties.name].deltadeaths
+        })
+        .on('mouseout', (item) => {
+            state_id.innerText = 'India'
+            state_confirmed.innerHTML = 'Confirmed : ' + india_data.total_values.confirmed
+            state_recovered.innerHTML = 'Recovered : ' + india_data.total_values.recovered
+            state_active.innerHTML = 'Active : ' + india_data.total_values.active
+            delta_confirm.innerHTML = 'Delta Confirm: ' + india_data.total_values.deltaconfirmed
+            delta_death.innerHTML = 'Delta Death : ' + india_data.total_values.deltadeaths
+        });
+    state_id.innerText = 'India'
+    state_confirmed.innerHTML = 'Confirmed : ' + india_data.total_values.confirmed
+    state_recovered.innerHTML = 'Recovered : ' + india_data.total_values.recovered
+    state_active.innerHTML = 'Active : ' + india_data.total_values.active
+    delta_confirm.innerHTML = 'Delta Confirm: ' + india_data.total_values.deltaconfirmed
+    delta_death.innerHTML = 'Delta Death : ' + india_data.total_values.deltadeaths
 }
 
 fetch("/map_file/india.geo.json").then(response => response.json()).then((data) => {

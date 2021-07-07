@@ -1,6 +1,6 @@
 body {
     /*background: linear-gradient( rgb(36, 36, 36), rgb(196, 196, 196));*/
-    background-color: grey;
+    background-color: rgb(240, 240, 240);
     margin: 0px;
 }
 
@@ -11,19 +11,30 @@ body {
     header .main-header {
         font-size: 28px!important;
     }
+    header h1 {
+        margin: 4px 0px 50px 0px;
+    }
 }
 
 @media (max-width:768px) {
     header .main-header {
         font-size: medium;
     }
+    header h1 {
+        margin: 4px 0px 25px 0px;
+    }
 }
 
 header .main-header {
     text-decoration: underline;
     text-align: center;
-    color: white;
     text-shadow: 2px 2px rgb(255, 0, 0);
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 footer .main-footer {
@@ -43,19 +54,19 @@ footer .main-footer h4 {
 
 .sub-header li {
     list-style: none;
-    margin: 80px 0px 80px 0px;
+    margin: 180px 0px 180px 0px;
 }
 
 .sub-header a {
     color: black;
     text-decoration: none;
-    text-shadow: 1px 1px red;
+    text-shadow: 1px 1px rgb(0, 153, 255);
 }
 
 .sub-header a:hover {
     color: black;
     animation: none;
-    text-shadow: 1px 1px white;
+    text-shadow: 2px 2px red;
 }
 
 @media (min-width:768px) {

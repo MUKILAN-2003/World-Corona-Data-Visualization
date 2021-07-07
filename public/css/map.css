@@ -1,12 +1,23 @@
+/*Common For India And World*/
+
 .map {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+.detail {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0px 0px 15px 3px rgb(0, 153, 255);
+    border-radius: 10px;
+    background-color: rgba(0, 153, 255, 0.349);
+    padding: 8px;
+}
+
 @media (max-width:768px) {
     .detail {
-        width: 100%;
+        width: 90%;
         text-align: center;
         font-size: large;
     }
@@ -16,5 +27,30 @@
     .detail {
         align-self: center;
         font-size: x-large;
+        width: 25%;
     }
+}
+
+
+/* World Map Styling */
+
+#country_id {
+    text-align: center;
+    font-size: xx-large;
+}
+
+#country_confirm_new {
+    color: rgb(0, 255, 0);
+}
+
+#country_death_new {
+    color: red;
+}
+
+
+/* India Map Styling */
+
+#state_id {
+    text-align: center;
+    font-size: xx-large;
 }
