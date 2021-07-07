@@ -10,12 +10,16 @@
 </head>
 
 <body>
-    <%- include('../templates/header.ejs') %>
-        <div class="sub-header">
-            <li><a href="/world">WORLD</a></li>
-            <li><a href="/india">INDIA</a></li>
+    <header>
+        <div class="main-header">
+            <h1><a href='/' style="color: rgb(0, 153, 255);text-align: center;">COVID-19 Tracker</a></h1>
         </div>
-        <%- include('../templates/footer.ejs') %>
+    </header>
+    <div class="sub-header">
+        <li><a href="/world">WORLD</a></li>
+        <li><a href="/india">INDIA</a></li>
+    </div>
+    <%- include('../templates/footer.ejs') %>
 </body>
 
 </html>

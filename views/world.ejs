@@ -15,26 +15,35 @@
 </head>
 
 <body>
-    <%- include('../templates/header.ejs') %>
-        <div class="map">
-            <div class='div-map' style="overflow: auto;">
-                <svg id="world-map" viewBox="200 180 620 10">
+    <header>
+        <div class="main-header">
+            <h1><a href='/' style="color: rgb(0, 153, 255);text-align: center;">COVID-19 Tracker</a></h1>
+        </div>
+        <div class='hint'>
+            <p class="d_desktop">Hover over for Detail</p>
+            <p class="d_mobile">Tap Country for Detail</p>
+            <a href='/'><i class="fas fa-home" style="margin: 20px 10px 0px 0px;"></i></a>
+        </div>
+    </header>
+    <div class="map">
+        <div class='div-map' style="overflow: auto;">
+            <svg id="world-map" viewBox="200 180 620 10">
 
                 </svg>
-            </div>
-            <div class="detail">
-                <p id='country_id'></p>
-                <p id='country_confirmed'></p>
-                <p id='country_recovered'></p>
-                <p id='country_active'></p>
-                <p id='country_critical'></p>
-                <p id='country_death'></p>
-            </div>
-
         </div>
-        <%- include('../templates/footer.ejs') %>
+        <div class="detail">
+            <p id='country_id'></p>
+            <p id='country_confirmed'></p>
+            <p id='country_recovered'></p>
+            <p id='country_active'></p>
+            <p id='country_critical'></p>
+            <p id='country_death'></p>
+        </div>
 
-            <script defer src="/js/world.js "></script>
+    </div>
+    <%- include('../templates/footer.ejs') %>
+
+        <script defer src="/js/world.js "></script>
 
 </body>
 

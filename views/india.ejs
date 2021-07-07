@@ -15,25 +15,34 @@
 </head>
 
 <body>
-    <%- include('../templates/header.ejs') %>
-        <div class="map">
-            <div class='div-map' style="overflow: auto;">
-                <svg id="india-map">
+    <header>
+        <div class="main-header">
+            <h1><a href='/' style="color: rgb(0, 153, 255);text-align: center;">COVID-19 Tracker</a></h1>
+        </div>
+        <div class='hint'>
+            <p class="d_desktop">Hover over for Detail</p>
+            <p class="d_mobile">Tap States for Detail</p>
+            <a href='/'><i class="fas fa-home" style="margin: 20px 10px 0px 0px;"></i></a>
+        </div>
+    </header>
+    <div class="map">
+        <div class='div-map' style="overflow: auto;">
+            <svg id="india-map">
 
                 </svg>
-            </div>
-            <div class="detail">
-                <p id='state_id'></p>
-                <p id='state_confirmed'></p>
-                <p id='state_recovered'></p>
-                <p id='state_active'></p>
-                <p id='state_death'></p>
-                <p id='delta_confirm'></p>
-                <p id='delta_death'></p>
-            </div>
         </div>
-        <%- include('../templates/footer.ejs') %>
-            <script defer src="/js/india.js"></script>
+        <div class="detail">
+            <p id='state_id'></p>
+            <p id='state_confirmed'></p>
+            <p id='state_recovered'></p>
+            <p id='state_active'></p>
+            <p id='state_death'></p>
+            <p id='delta_confirm'></p>
+            <p id='delta_death'></p>
+        </div>
+    </div>
+    <%- include('../templates/footer.ejs') %>
+        <script defer src="/js/india.js"></script>
 
 </body>
 
