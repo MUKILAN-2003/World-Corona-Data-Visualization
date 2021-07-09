@@ -82,12 +82,11 @@ function fetch_data() {
 }
 
 app.listen(process.env.PORT || 3000)
-console.log('Server Listening............check')
+console.log('Server Listening............ok')
 
 fetch_data();            // To Run in Heroku (1hr active) 
 //setInterval(fetch_data, 21600000);       # To Run on 24/7 Server
 
-console.log('Server Listening............ok')
 
 //Routing The Responce
 app.get('/', (req, res) => {
