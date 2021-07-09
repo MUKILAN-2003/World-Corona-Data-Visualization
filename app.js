@@ -17,6 +17,16 @@ var fetch_world_data = unirest("GET", "https://corona-virus-world-and-india-data
 var fetch_india_data = unirest("GET", "https://corona-virus-world-and-india-data.p.rapidapi.com/api_india");
 
 //Header Required To fetch data
+fetch_world_data.headers({
+    "x-rapidapi-key": "7de4557e88mshf2dcd246f68ff52p1d7934jsnaf2f11062ec2",
+    "x-rapidapi-host": "corona-virus-world-and-india-data.p.rapidapi.com",
+    "useQueryString": true
+});
+fetch_india_data.headers({
+    "x-rapidapi-key": "7de4557e88mshf2dcd246f68ff52p1d7934jsnaf2f11062ec2",
+    "x-rapidapi-host": "corona-virus-world-and-india-data.p.rapidapi.com",
+    "useQueryString": true
+});
 
 async function collect_world_data() {
     await delay(3000);
@@ -71,7 +81,9 @@ function fetch_data() {
     collect_india_data();
 }
 
-setInterval(fetch_data, 21600000);
+
+fetch_data();            // To Run in Heroku (1hr active) 
+//setInterval(fetch_data, 21600000);       # To Run on 24/7 Server
 
 app.listen(process.env.PORT || 3000)
 console.log('Server Listening............ok')
