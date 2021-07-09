@@ -81,12 +81,11 @@ function fetch_data() {
     collect_india_data();
 }
 
+app.listen(process.env.PORT || 3000)
+console.log('Server Listening............ok')
 
 fetch_data();            // To Run in Heroku (1hr active) 
 //setInterval(fetch_data, 21600000);       # To Run on 24/7 Server
-
-app.listen(process.env.PORT || 3000)
-console.log('Server Listening............ok')
 
 //Routing The Responce
 app.get('/', (req, res) => {
