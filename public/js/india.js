@@ -54,6 +54,7 @@ function main() {
             state_id.innerText = item.properties.name
             state_confirmed.innerHTML = 'Confirmed : ' + india_data.state_wise[item.properties.name].confirmed
             state_recovered.innerHTML = 'Recovered : ' + india_data.state_wise[item.properties.name].recovered
+            state_death.innerHTML = 'Deaths : ' + india_data.state_wise[item.properties.name].deaths
             state_active.innerHTML = 'Active : ' + india_data.state_wise[item.properties.name].active
             delta_confirm.innerHTML = 'Delta Confirm: ' + india_data.state_wise[item.properties.name].deltaconfirmed
             delta_death.innerHTML = 'Delta Death : ' + india_data.state_wise[item.properties.name].deltadeaths
@@ -62,6 +63,7 @@ function main() {
             state_id.innerText = 'India'
             state_confirmed.innerHTML = 'Confirmed : ' + india_data.total_values.confirmed
             state_recovered.innerHTML = 'Recovered : ' + india_data.total_values.recovered
+            state_death.innerHTML = 'Deaths : ' + india_data.state_wise[item.properties.name].deaths
             state_active.innerHTML = 'Active : ' + india_data.total_values.active
             delta_confirm.innerHTML = 'Delta Confirm: ' + india_data.total_values.deltaconfirmed
             delta_death.innerHTML = 'Delta Death : ' + india_data.total_values.deltadeaths
@@ -69,6 +71,7 @@ function main() {
     state_id.innerText = 'India'
     state_confirmed.innerHTML = 'Confirmed : ' + india_data.total_values.confirmed
     state_recovered.innerHTML = 'Recovered : ' + india_data.total_values.recovered
+    state_death.innerHTML = 'Deaths : ' + india_data.state_wise[item.properties.name].deaths
     state_active.innerHTML = 'Active : ' + india_data.total_values.active
     delta_confirm.innerHTML = 'Delta Confirm: ' + india_data.total_values.deltaconfirmed
     delta_death.innerHTML = 'Delta Death : ' + india_data.total_values.deltadeaths
